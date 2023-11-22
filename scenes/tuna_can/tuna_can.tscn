@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1d5q43vxsi7g"]
+
+[ext_resource type="Script" path="res://scenes/tuna_can/tuna_can.gd" id="1_dwax8"]
+[ext_resource type="Texture2D" uid="uid://bpxgw5vfk2du2" path="res://scenes/tuna_can/tuna_can.png" id="1_isw0n"]
+
+[node name="TunaCan" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_dwax8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.075, 0.076)
+texture = ExtResource("1_isw0n")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-31, -27, -23, -37, 1, -30, 16, -19, 30, -4, 36, 10, 35, 31, 0, 37, -36, 34, -36, 7)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

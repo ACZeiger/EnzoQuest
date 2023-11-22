@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://f2a4sjw2w8pa"]
+
+[ext_resource type="Script" path="res://scenes/parallax_back/parallax_back.gd" id="1_3lh6p"]
+[ext_resource type="Texture2D" uid="uid://chc3utwtudcxy" path="res://scenes/parallax_back/background.png" id="1_co5ci"]
+[ext_resource type="Texture2D" uid="uid://dd3kn7p1wkxdl" path="res://scenes/parallax_back/leaves1.png" id="2_qg852"]
+[ext_resource type="Texture2D" uid="uid://c3qaqr8oxjskm" path="res://scenes/parallax_back/cloud1.png" id="3_upl0j"]
+[ext_resource type="Texture2D" uid="uid://ddbi7bdp1tr38" path="res://scenes/parallax_back/tree1.png" id="3_vm6xa"]
+
+[node name="ParallaxBack" type="ParallaxBackground"]
+script = ExtResource("1_3lh6p")
+scrolling_speed = 40
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(599.5, 338.501)
+scale = Vector2(1.46398, 1.46739)
+texture = ExtResource("1_co5ci")
+
+[node name="ParallaxCloud" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.75, 0.75)
+motion_mirroring = Vector2(1200, 0)
+
+[node name="Clouds1" type="Sprite2D" parent="ParallaxCloud"]
+position = Vector2(309, -350)
+scale = Vector2(0.661667, 0.450833)
+texture = ExtResource("3_upl0j")
+
+[node name="Clouds2" type="Sprite2D" parent="ParallaxCloud"]
+position = Vector2(818, -363)
+scale = Vector2(0.661667, 0.450833)
+texture = ExtResource("3_upl0j")
+
+[node name="Tree3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1007, 456)
+scale = Vector2(0.383333, 0.453333)
+texture = ExtResource("3_vm6xa")
+
+[node name="Tree2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(309, 362)
+scale = Vector2(0.363333, 0.42)
+texture = ExtResource("3_vm6xa")
+
+[node name="ParallaxLeaf" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(1200, 0)
+
+[node name="Leaves" type="Sprite2D" parent="ParallaxLeaf"]
+position = Vector2(621, 559)
+scale = Vector2(0.976667, 0.661667)
+texture = ExtResource("2_qg852")
+
+[node name="Tree1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(239, 389)
+scale = Vector2(0.426667, 0.51)
+texture = ExtResource("3_vm6xa")

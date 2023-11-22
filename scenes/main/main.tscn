@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3ymkejshdj4e"]
+
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_36axe"]
+[ext_resource type="PackedScene" uid="uid://vqp1pwil0ynn" path="res://scenes/title_screen/title_screen.tscn" id="2_pvjpf"]
+[ext_resource type="PackedScene" uid="uid://w507p5ubcqjl" path="res://scenes/level/level.tscn" id="3_f4hod"]
+[ext_resource type="AudioStream" uid="uid://csopdv8nhasqq" path="res://scenes/tuna_can/tuna_get.wav" id="4_ji60b"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_36axe")
+title_scene = ExtResource("2_pvjpf")
+level_scene = ExtResource("3_f4hod")
+
+[node name="MainButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -67.0
+offset_top = -175.0
+offset_right = 83.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 54
+text = "Start"
+
+[node name="ButtonPress" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ji60b")
+
+[connection signal="pressed" from="MainButton" to="." method="_on_main_button_pressed"]
