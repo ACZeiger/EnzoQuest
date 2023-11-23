@@ -7,7 +7,7 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_load_title()
-
+	
 
 func _load_title() -> void:
 	if has_node("EndScreen"):
@@ -17,6 +17,7 @@ func _load_title() -> void:
 	move_child(title, 0)
 	$MainButton.text = "Start"
 	$MainButton.size.x = 150
+	
 
 func _load_level() -> void:
 	if has_node("TitleScreen"):
@@ -26,6 +27,7 @@ func _load_level() -> void:
 	move_child(level, 0)
 	level.completed.connect(_on_level_completed)
 	$MainButton.hide()
+	
 
 func _load_end() -> void:
 	if has_node("Level"):
