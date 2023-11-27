@@ -1,14 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3ymkejshdj4e"]
+[gd_scene load_steps=6 format=3 uid="uid://b3ymkejshdj4e"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_36axe"]
 [ext_resource type="PackedScene" uid="uid://vqp1pwil0ynn" path="res://scenes/title_screen/title_screen.tscn" id="2_pvjpf"]
 [ext_resource type="PackedScene" uid="uid://w507p5ubcqjl" path="res://scenes/level/level.tscn" id="3_f4hod"]
+[ext_resource type="PackedScene" uid="uid://csko7x7gwygee" path="res://scenes/end_screen/end_screen.tscn" id="4_2ksb5"]
 [ext_resource type="AudioStream" uid="uid://csopdv8nhasqq" path="res://scenes/tuna_can/tuna_get.wav" id="4_ji60b"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_36axe")
 title_scene = ExtResource("2_pvjpf")
 level_scene = ExtResource("3_f4hod")
+end_scene = ExtResource("4_2ksb5")
 
 [node name="MainButton" type="Button" parent="."]
 anchors_preset = 7
